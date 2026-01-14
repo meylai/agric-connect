@@ -1,4 +1,4 @@
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import FarmerHome from './FarmerHome';
 import AddListing from './AddListing';
 import MarketPrices from './MarketPrices';
@@ -6,7 +6,33 @@ import MyListings from './MyListings';
 import Orders from './Orders';
 import Profile from './Profile';
 
-export default function FarmerDashboard() {
+import './FarmerDashboard.css';
+
+function FarmerDashboard() {
+  return (
+    <div className="dashboard">
+      <h1>Farmer Dashboard</h1>
+
+      <div className="dashboard-cards">
+        <Link to="/farmer/Addlistings" className="card-link">
+          <div className="card">My Listings</div>
+        </Link>
+
+        <Link to="/farmer/Orders" className="card-link">
+          <div className="card">Orders</div>
+        </Link>
+
+        <Link to="/farmer/Profile" className="card-link">
+          <div className="card">My Profile</div>
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+export default FarmerDashboard;
+
+/*export default function FarmerDashboard() {
   return (
     <div>
       <nav className="bottom-nav">
@@ -26,4 +52,4 @@ export default function FarmerDashboard() {
       </Routes>
     </div>
   );
-}
+}*/
