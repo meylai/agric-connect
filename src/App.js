@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -28,6 +29,7 @@ export default function App() {
       <Route path="/farmer/profile" element={<FarmerProfile />} />
       </Routes>
       <Footer />
+      <SpeedInsights />
     </BrowserRouter>
   );
 }
